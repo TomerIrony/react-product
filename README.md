@@ -12,6 +12,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 **Insturctions**
 
+![image](https://user-images.githubusercontent.com/87696247/144431296-0ebeb997-aa49-42e4-adea-e989b3edc2e6.png)
+
+
 import the json files from data into MongoDB using MongoDB Compass or the terminal.
 make a new data base named _products_ and import the two files into this DB with the names _cards_ and _favorites_
 

@@ -12,6 +12,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 **Insturctions**
 
+import the json files from data into MongoDB using MongoDB Compass or the terminal.
+make a new data base named _products_ and import the two files into this DB with the names _cards_ and _favorites_
+
 open terminal inside the backend folder and run 'npm run start',
 after getting the connected message go to ./react-product and run 'npm run start' again.
 Then go to localhost:3000

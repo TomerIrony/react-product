@@ -1,0 +1,11 @@
+.card__like-active {
+  background-image: url(../../../images/filedHeart.svg);
+  height: 19px;
+  width: 21px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}

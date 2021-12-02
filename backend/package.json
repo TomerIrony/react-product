@@ -1,0 +1,24 @@
+{
+  "name": "back-express",
+  "version": "1.0.0",
+  "description": "`/data` — JSON files to temporarily emulate database integration.",
+  "main": "app.js",
+  "scripts": {
+    "start": "set PORT=3001 && node app.js",
+    "lint": "npx eslint .",
+    "dev": "set PORT=3001 && nodemon app.js"
+  },
+  "author": "Tomer Irony",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  }
+}

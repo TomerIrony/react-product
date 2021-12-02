@@ -1,0 +1,11 @@
+.popout__caption {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  margin: 10 0 0 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 15px;
+  line-height: 100%;
+  font-weight: 400;
+  color: white;
+}

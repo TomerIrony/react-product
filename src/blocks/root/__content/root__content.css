@@ -1,0 +1,10 @@
+.root__content {
+  max-width: 1280px;
+  min-width: 320px;
+  background-color: #5754ff;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #5754ff;
+}

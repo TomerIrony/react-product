@@ -1,0 +1,29 @@
+.popout__close-btn {
+  cursor: pointer;
+  background: url(../../../images/exiticon.svg) center center;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+  border: none;
+  position: absolute;
+  top: -43px;
+  right: -43px;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+.popout__close-btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 425px) {
+  .popout__close-btn {
+    height: 26px;
+    width: 26px;
+    top: -40px;
+    right: 0;
+  }
+}

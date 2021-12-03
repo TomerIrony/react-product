@@ -24,6 +24,7 @@ import the json file from data into MongoDB using MongoDB Compass or the termina
 make a new data base named _products_ and import into this DB the json file named *cards*
 
 5.open terminal inside the backend folder and run 'npm run start'
+
 6. after getting the connected message go to ./react-product and open a new terminal, run 'npm run start' again.
 Then go to localhost:3000
 

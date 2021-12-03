@@ -23,7 +23,7 @@ open terminal inside the backend folder and run 'npm run start',
 after getting the connected message go to ./react-product and run 'npm run start' again.
 Then go to localhost:3000
 
-[Click here to get to the site](localhost:3000/)
+[Click here to get to the site](https://localhost:3000/)
 
 # react-product
 

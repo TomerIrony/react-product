@@ -24,45 +24,34 @@ class Api {
     }).then(this._checkResponse);
   }
 
-  deleteFavoriteCard(cardId) {
-    return fetch(`${this._url}/cards/favorites/${cardId}`, {
-      method: 'DELETE',
+  getCardById(cardId) {
+    return fetch(`${this._url}/cards/${cardId}`, {
       headers: this._headers,
     }).then(this._checkResponse);
   }
 
-  createCard(name, link) {
+  createCard(name, link, info) {
     return fetch(`${this._url}/cards/`, {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
         name,
         link,
+        info,
       }),
     }).then(this._checkResponse);
   }
 
-  deleteCard(cardId) {
-    return fetch(`${this._url}/cards/${cardId}`, {
-      method: 'DELETE',
+  cardLike(cardId) {
+    return fetch(`${this._url}/cards/likes/${cardId}`, {
+      method: 'PUT',
       headers: this._headers,
-    }).then(this._checkResponse);
-  }
-
-  likeCard(name, link) {
-    return fetch(`${this._url}/cards/favorites`, {
-      method: 'POST',
-      headers: this._headers,
-      body: JSON.stringify({
-        name,
-        link,
-      }),
     }).then(this._checkResponse);
   }
 
   removeLike(cardId) {
-    return fetch(`${this._url}/cards/likes/${cardId}`, {
-      method: 'DELETE',
+    return fetch(`${this._url}/cards/remove/${cardId}`, {
+      method: 'PUT',
       headers: this._headers,
     }).then(this._checkResponse);
   }

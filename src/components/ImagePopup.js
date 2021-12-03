@@ -1,17 +1,8 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 function ImagePopup(props) {
-  let description;
-  switch (props.data.name) {
-    case 'Folding Mountain Bicycle':
-      description =
-        '26 Inch Folding Mountain Bicycle 21 Speed Double Shock Absorption Off-Road Variable Speed Adult Student One-Wheeled Bike';
-      break;
-    case 'Kids Bike':
-      description =
-        '14-inch Foldable Ultra-lightweight Kids Bike Children Variable Speed Dual Brake Folding Bicycle For Student';
-    case 'Chi Tong Children Bicycle':
-      description =
-        'Chi Tong Children Bicycle Boy 12 inches 2-9 year old Baby Bicycle Child Bicycle Boy and Girl Child Bicycle';
-  }
+  const id = props.data._id;
   return (
     <div
       className={`popout ${
@@ -33,7 +24,13 @@ function ImagePopup(props) {
           className="popout__image"
         />
         <h2 id="popoutImageCaption" className="popout__caption">
-          {description}
+          <Link
+            className="navbar__link"
+            to={`/item/${id}`}
+            state={{ card: id }}
+          >
+            Click here to get a desciprtion
+          </Link>
         </h2>
       </div>
     </div>

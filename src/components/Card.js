@@ -2,13 +2,13 @@ import React from 'react';
 
 function Card(props) {
   return (
-    <article className="card">
+    <article className="card" id={props.card._id}>
       <button
         type="button"
         aria-label="close card"
         className={props.delete ? 'card__close' : 'card__close_hide'}
         id="cardClose"
-        onClick={() => props.onCardDelete(props.card)}
+        onClick={() => props.cardDelete(props.card)}
       ></button>
       <img
         onClick={() => {
@@ -24,7 +24,7 @@ function Card(props) {
         <div className="card__group">
           <button
             onClick={() => {
-              props.getCard(props.card);
+              props.likeHandle(props.card);
             }}
             type="button"
             className={props.like ? 'card__like-btn' : 'card__like-btn-hidden'}

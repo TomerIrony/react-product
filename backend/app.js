@@ -3,7 +3,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cardsRoutes = require('./routes/cards');
-const cardsFavorites = require('./routes/favorites');
 
 mongoose.connect('mongodb://localhost:27017/products', {
   useNewUrlParser: true,
@@ -23,7 +22,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', cardsRoutes);
-app.use('/', cardsFavorites);
 app.use((req, res) => {
   res.status(404).send({ message: 'Requested resource not found' });
 });

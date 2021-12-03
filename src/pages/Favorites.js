@@ -6,8 +6,14 @@ import Main from '../components/Main';
 import ImagePopup from '../components/ImagePopup';
 
 function Favorites(props) {
-  const [cards, setCards] = React.useState([]);
+  const cardsArray = [];
+  const [card, setCard] = React.useState([]);
   const [selectedCard, setSelectedCard] = React.useState({});
+
+  function handleCardDelete(card) {
+    api.removeLike(card._id);
+    document.getElementById(card._id).remove();
+  }
 
   function handleCardClick(card) {
     setSelectedCard(card);
@@ -15,9 +21,16 @@ function Favorites(props) {
 
   React.useEffect(() => {
     api
-      .getFavoriteCard()
+      .getInitialCards()
       .then((res) => {
-        setCards(res);
+        res.forEach((element) => {
+          if (element.liked === true) {
+            cardsArray.push(element);
+          }
+        });
+      })
+      .then(() => {
+        setCard(cardsArray);
       })
       .catch((err) => {
         console.log(err);
@@ -27,36 +40,16 @@ function Favorites(props) {
   function closeAllPopups() {
     setSelectedCard({});
   }
-  function handleCardDelete(card) {
-    const deleteId = card._id;
-    const newCardArr = [];
-    api.createCard(card.name, card.link);
-    api
-      .deleteFavoriteCard(card._id)
-      .then(() => {
-        cards.filter((card) => {
-          if (!(card._id == deleteId)) {
-            newCardArr.push(card);
-          }
-        });
-      })
-      .then(() => {
-        setCards(newCardArr);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }
+
   return (
     <div className="App">
       <Header />
       <Main
+        cardDelete={handleCardDelete}
         like={false}
         getCardData={handleCardClick}
-        cards={cards}
-        setCards={setCards}
+        cards={card}
         delete={true}
-        cardDelete={handleCardDelete}
       />
       <ImagePopup data={selectedCard} onClose={closeAllPopups} />
       <Footer />

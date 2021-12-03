@@ -1,0 +1,11 @@
+.item__image {
+  margin: 15px 0 0 0;
+  width: 550px;
+  align-self: center;
+}
+
+@media screen and (max-width: 767px) {
+  .item__image {
+    width: 100vw;
+  }
+}

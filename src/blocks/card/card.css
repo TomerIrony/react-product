@@ -1,8 +1,9 @@
 .card {
+  max-width: 282px;
   margin: 0;
   overflow: hidden;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #916bbf;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;

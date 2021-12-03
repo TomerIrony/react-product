@@ -13,7 +13,8 @@ function Main(props) {
             fetchData={props.getCardData}
             like={props.like}
             delete={props.delete}
-            onCardDelete={props.cardDelete}
+            cardDelete={props.cardDelete}
+            likeHandle={props.cardLikeHandle}
           />
         ))}
       </section>
